@@ -90,7 +90,7 @@ function checkAuthenticated(req, res, next) {
 // logged in user can't go to login or register
 function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
-    res.redirect('/'); // there is a user
+    return res.redirect('/'); // there is a user
   }
   next(); // there is a user
 }

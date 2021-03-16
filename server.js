@@ -92,7 +92,7 @@ function checkNotAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     res.redirect('/'); // there is a user
   }
-  return next(); // there is a user
+  next(); // there is a user
 }
 
 app.listen(3000);

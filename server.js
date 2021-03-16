@@ -75,7 +75,7 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
 
 app.delete('/logout', (req, res) => {
   req.logOut(); // a part of passport function. Clear a session and log a user out automatically.
-  req.redirect('/login');
+  res.redirect('/login');
 });
 
 // NOT logged in user can't go to main page. redirect to login instead
